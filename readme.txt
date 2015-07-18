@@ -13,5 +13,7 @@
 3. SpringInjectingCollection3 
 4. BrainApplicationContext - Bean Defintion Inheritance
 5. LifeCycleBean- 
+6. SpringInjectingInterface6
+7. SpringInjectingAnnotation7
 
 --WebService
