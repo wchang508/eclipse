@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+  
+	<bean id="triangle" class="edu.hsingwu.javabrains.Triangle">
+		<property name="pointA" ref="zeroPoint" />	
+		<property name="pointB" ref="point2" />	
+		<property name="pointC" ref="point3" />  		
+	</bean>
+	
+	<bean id="zeroPoint" class="edu.hsingwu.javabrains.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	
+	<bean id="point2" class="edu.hsingwu.javabrains.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+	
+	<bean id="point3" class="edu.hsingwu.javabrains.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean>
+
+
+<!-- Inner Beans (both bean id and bean name can pass to DrawingApp)
+ 
+	<bean id="triangle2" class="edu.hsingwu.javabrains.Triangle" name="triangle-name">
+		<property name="pointA" ref="zeroPoint"/>	
+		
+		<property name="PointB">  // Inner Bean no need ref to outer bean 
+			<bean class="edu.hsingwu.javabrains.Point" >	//no need bean id, because no need to reference 
+				<property name="x" value="20" />
+				<property name="y" value="10" />
+			</bean>
+		</property>
+		
+		<property name="pointC">   //Inner Bean
+			<bean class="edu.hsingwu.javabrains.Point" >	
+				<property name="x" value="-20" />
+				<property name="y" value="20" />
+			</bean>
+		</property>  
+	</bean>	
+	
+	<bean id="zeroPoint" class="edu.hsingwu.javabrains.Point" >	
+			<property name="x" value="10" />
+			<property name="y" value="0" />
+	</bean>	
+-->
+	<!--  alias name of triangle bean 
+	<alias name="triangle2" alias="triangle-alias" />
+	-->
+	
+	<!-- autowiring autowire="byName"; "byType"; "constructor"-->
+	<!-- scope="single"; mutiple getbean function can only generate one instance "prototype" -->
+	<bean id="triangle3" class="edu.hsingwu.javabrains.Triangle" autowire ="byName" scope="prototype">
+				
+	</bean>
+	
+	<bean id="pointA" class="edu.hsingwu.javabrains.Point">
+		<property name="x" value="100" />
+		<property name="y" value="200" />
+	</bean>
+	
+	<bean id="pointB" class="edu.hsingwu.javabrains.Point">
+		<property name="x" value="-200" />
+		<property name="y" value="50" />
+	</bean>
+	
+	<bean id="pointC" class="edu.hsingwu.javabrains.Point">
+		<property name="x" value="125" />
+		<property name="y" value="-120" />
+	</bean>
+	
+</beans>

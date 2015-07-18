@@ -1,0 +1,8 @@
+#Tomcat publish data
+#Wed Jul 01 16:49:07 CST 2015
+org.eclipse.jst.jee.server\:SimpleServletProject1=C\:\\apache-tomcat-7.0.61\\wtpwebapps\\SimpleServletProject1
+org.eclipse.jst.jee.server\:Struts2Project1=C\:\\apache-tomcat-7.0.61\\wtpwebapps\\Struts2Project1
+org.eclipse.jst.jee.server\:LoginApp=C\:\\apache-tomcat-7.0.61\\wtpwebapps\\LoginApp
+org.eclipse.jst.jee.server\:JSPProject=C\:\\apache-tomcat-7.0.61\\wtpwebapps\\JSPProject
+org.eclipse.jst.jee.server\:Struts2TutorialFinder=C\:\\apache-tomcat-7.0.61\\wtpwebapps\\Struts2TutorialFinder
+org.eclipse.jst.jee.server\:BrainStruts2Starter=C\:\\apache-tomcat-7.0.61\\wtpwebapps\\BrainStruts2Starter

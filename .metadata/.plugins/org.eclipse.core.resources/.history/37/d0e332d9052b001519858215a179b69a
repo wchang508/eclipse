@@ -1,0 +1,14 @@
+package edu.hsingwu.javabrains;
+
+import org.springframework.context.ApplicationEvent;
+import org.springframework.context.ApplicationListener;
+
+public class myEventListener implements ApplicationListener {
+
+	@Override
+	public void onApplicationEvent(ApplicationEvent arg0) {
+		
+		
+	}
+
+}

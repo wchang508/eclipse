@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<include file="login.xml"/>
+<!--  一定要加/,不然會無法出現在namespace裡 
+	<package name="default"  namespace="/tutorials" extends="struts-default">
+		<action name="getTutorial" class="edu.hsingwu.doa.action.TutorialAction">
+			<result name="success">/Success.jsp</result> 
+			<result name="failure">/error.jsp</result>
+		</action>	
+	</package>
+-->
+<!--  can link to http://localhost:8080/Struts2TutorialFinder/searchForm.action -->
+	<!--  
+	<package name="search"  namespace="/" extends="struts-default">
+		<action name="searchForm">   /*struts2 allows dummy class, which mean no logic behind*/
+			<result>/searchForm.jsp</result>			
+		</action>
+	</package>
+	-->
+	<!-- wildcard  default method is execute()-->
+	
+	<package name="search"  namespace="/" extends="struts-default">
+		<action name="search*">
+			<result>/search{1}.jsp</result>			
+		</action>
+	</package>
+	
+	 
+	<package name="default"  namespace="/tutorials" extends="struts-default">
+		<action name="get*" class="edu.hsingwu.doa.action.{1}Action">
+			<result name="success">/Success.jsp</result> 
+			<result name="failure">/error.jsp</result>
+		</action>	
+		
+		<action name="update*" class="edu.hsingwu.doa.action.{1}Action" method="updateTutorialMethod">
+			<result name="success">/Success.jsp</result> 
+			<result name="failure">/error.jsp</result>
+		</action>	
+		<action name="addTutorial" class="edu.hsingwu.doa.action.TutorialAction" method="addTutorialMethod">
+			<result name="success">/Success.jsp</result> 
+			<result name="failure">/error.jsp</result>
+		</action>	
+	</package>
+	
+</struts>

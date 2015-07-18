@@ -1,0 +1,5 @@
+package edu.hsingwu.javabrains;
+
+public class DrawEvent {
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="triangle1" class="edu.hsingwu.javabrains.Triangle" >
+		
+		 <!-- automatic setter (pass value to member variable) of Triangle object 
+		 <property name="type" value="Equilateral" />  
+		 -->
+		
+		<!-- pass value to the constructor of Triangle class (Constructor Injection) --> 		
+		<constructor-arg index="0" type="java.lang.String" value="Equilateral"/>
+		<constructor-arg index="1" type="int" value="20"/>
+		
+		
+	</bean>
+	
+	<bean id="triangle2" class="edu.hsingwu.javabrains.Triangle" >
+		
+		<!-- pass value to the constructor of Triangle class (Constructor Injection) --> 		
+		<constructor-arg type="java.lang.String" value="Equilateral"/>
+		
+	</bean>
+	
+</beans>

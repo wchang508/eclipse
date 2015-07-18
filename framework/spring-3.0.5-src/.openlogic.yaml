@@ -1,0 +1,18 @@
+--- 
+name: Spring 3.0.5 Source
+platform_id: all
+platform_version: all
+distribution_file_uuid_string: openlogic-spring-3.0.5-all-src-1
+platform_vendor: all
+description: Spring 3.0.5 Source
+platform_arch: all
+distribution_file_uuid: 383c2100d8a4758294cd30df417e64db18b8cfdebb1cf74d03973715ac3ddc4f
+distribution_version: 1
+distribution_flavor: ""
+distribution_raw_file: 3.0.5/spring-framework-3.0.5.RELEASE.zip
+notify: "yes"
+package_version: 3.0.5
+package_id: spring
+release_date: "2011-04-26"
+distribution_notes: ""
+distribution_type: src

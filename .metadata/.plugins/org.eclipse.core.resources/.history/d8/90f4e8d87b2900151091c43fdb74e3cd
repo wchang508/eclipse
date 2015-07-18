@@ -1,0 +1,34 @@
+package edu.hsingwu.javabrains;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Circle implements Shape {
+	
+	
+	private Point center;
+
+	public Point getCenter() {
+		return center;
+	}
+	/*
+	@Required // telling spring this is a required member variable, <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+	public void setCenter(Point center) {
+		this.center = center;
+	}
+	*/
+	
+	@Autowired
+	public void setCenter(Point center) {
+		this.center = center;
+	}
+
+	@Override
+	public void draw() {
+		// TODO Auto-generated method stub
+		System.out.println("Drawing Circle");
+		System.out.println("Circle: Point is: ("+ center.getX()+", "+center.getY()+")");
+	}
+	
+	
+
+}

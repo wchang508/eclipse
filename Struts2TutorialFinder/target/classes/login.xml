@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="login1" namespace="/" extends="struts-default">
+		<action name="login1" class="edu.hsingwu.doa.action.LoginAction1">
+			<result name="success">/searchForm.jsp</result>
+			<result name="failure">/login.jsp</result>
+		</action>
+	
+	</package>
+	
+	<package name="login2" namespace="/" extends="struts-default">
+		<action name="login2" class="edu.hsingwu.doa.action.LoginAction2">
+			<result name="success">/searchForm.jsp</result>
+			<result name="login">/login.jsp</result> <!--result name login was inherited from Action interface -->
+		</action>
+	
+	</package>
+	
+	<package name="login3" namespace="/" extends="struts-default">
+		<action name="login3" class="edu.hsingwu.doa.action.LoginAction3">
+			<result name="success">/searchForm.jsp</result>
+			<result name="login">/login.jsp</result> <!--result name login was inherited from Action interface -->
+			
+			<!-- struct2 "input" Form page by default, before execute() call, struts2 calls validate() method first to validate the member variables -->
+			<result name="input">/login.jsp</result> 
+		</action>
+	
+	</package>
+	
+	<package name="login4" namespace="/" extends="struts-default">
+		<action name="login4" class="edu.hsingwu.doa.action.LoginAction4">
+			<result name="success">/searchForm.jsp</result>
+			<result name="login">/login.jsp</result> <!--result name login was inherited from Action interface -->
+			
+			<!-- struct2 "input" Form page by default, before execute() call, struts2 calls validate() method first to validate the member variables -->
+			<result name="input">/login.jsp</result> 
+		</action>
+	
+	</package>
+
+</struts>
