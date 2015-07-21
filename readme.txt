@@ -15,5 +15,6 @@
 5. LifeCycleBean- 
 6. SpringInjectingInterface6
 7. SpringInjectingAnnotation7
+8. SpringAOP8
 
 --WebService

@@ -1,0 +1,10 @@
+package edu.hsingwu.java.aspect;
+
+public class LoginAspect {
+	
+	public void LoginAdvice()
+	{
+		System.out.println("Advice run. Get Method called");
+	}
+
+}
