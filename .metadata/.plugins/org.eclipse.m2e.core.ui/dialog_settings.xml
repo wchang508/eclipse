@@ -14,6 +14,7 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="SpringAOP8"/>
 			<item value="SpringInjectingAnnotation7"/>
 			<item value="SpringInjectingInterface6"/>
 			<item value="LifeCycleBean"/>
@@ -26,6 +27,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="SpringAOP8"/>
 			<item value="SpringInjectingAnnotation7"/>
 			<item value="SpringInjectingInterface6"/>
 			<item value="LifeCycleBean"/>

@@ -1,0 +1,46 @@
+package edu.hsingwu.java.aspect;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+
+import edu.hsingwu.java.model.Circle;
+
+@Aspect
+public class LoginAspect {
+	
+	//@Before("execution(public String getName())")  
+	//@Before("execution(public String edu.hsingwu.java.model.Circle.getName())")
+	//@Before("execution(public * get*(*))")  //it will execute before getCircle()  and getName(), * mean 1 or more arguments
+	//@Before("execution(public * get*(..))")  //.. mean 0 or more arguments	
+	
+	@Before("allGet() && allCircleMethods()")
+	public void LoginAdvice(JoinPoint joinPoint)
+	{
+		System.out.println(joinPoint.toString()+", "+joinPoint.getTarget());
+		Circle circle = (Circle)joinPoint.getTarget();
+	}
+	@Before("args(new_name)")
+	public void stringArgumentMethods(String new_name)
+	{
+		System.out.println("A method that takes String arguments has been called " + new_name);
+	}
+	
+	
+	//@Before("execution(public * get*())")
+	@Before("allCircleMethods()")
+	public void secondAdvice()
+	{
+		System.out.println(" Second Advice executed. Get Method called");
+	}
+	
+	@Pointcut("execution( * get*())")
+	public void allGet(){}
+	
+	//@Pointcut("within(edu.hsingwu.java.model..*)") //all classes in sub package of edu.hsingwu.java.model
+	@Pointcut("within(edu.hsingwu.java.model.Circle)") //apply all the methods in Circle
+	public void allCircleMethods(){}
+	
+
+}

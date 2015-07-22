@@ -2,4 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="edu.hsingwu.dto.User"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.Action"/>
+<fullyQualifiedTypeName name="edu.hsingwu.java.service.ShapeService"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.JoinPoint"/>
 </qualifiedTypeNameHistroy>

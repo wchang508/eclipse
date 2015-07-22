@@ -1,0 +1,34 @@
+package edu.hsingwu.java.aspect;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+
+@Aspect
+public class LoginAspect {
+	
+	//@Before("execution(public String getName())")  
+	//@Before("execution(public String edu.hsingwu.java.model.Circle.getName())")
+	//@Before("execution(public * get*(*))")  //it will execute before getCircle()  and getName(), * mean 1 or more arguments
+	//@Before("execution(public * get*(..))")  //.. mean 0 or more arguments	
+	
+	@Before("allGet()")
+	public void LoginAdvice()
+	{
+		System.out.println("Advice run. Get Method called");
+	}
+	//@Before("execution(public * get*())")
+	@Before("allCircleMethods()")
+	public void secondAdvice()
+	{
+		System.out.println(" Second Advice executed. Get Method called");
+	}
+	
+	@Pointcut("execution( * get*())")
+	public void allGet(){}
+	
+	@Pointcut("within(edu.hsingwu.java.model.Circle)") //apply all the methods in Circle
+	public void allCircleMethods(){}
+	
+
+}
